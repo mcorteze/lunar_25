@@ -1,0 +1,47 @@
+/* Aplicar suavizado de fuente a toda la página */
+body {
+  -webkit-font-smoothing: antialiased; /* Suavizado de fuentes en navegadores WebKit */
+}
+
+/* Definición de la animación */
+@keyframes anim-opacity-full {
+  0% {
+    opacity: 0; /* Al inicio, la opacidad es 0 (totalmente transparente) */
+  }
+  100% {
+    opacity: 1; /* Al final, la opacidad es 1 (totalmente visible) */
+  }
+}
+
+/* Aplicar la animación a los contenedores */
+.parallax-container-1,
+.parallax-container-2,
+.parallax-container-3 {
+  position: relative;
+  animation: anim-opacity-full 480ms ease-out; /* Aplicar animación de opacidad */
+}
+
+.parallax-container-1 img,
+.parallax-container-2 img,
+.parallax-container-3 img {
+  position: absolute;
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+}
+
+
+.parallax-container-1 img {
+  top: -10%; /* Ajusta este valor para mover la imagen hacia arriba */
+  left: 0;
+}
+
+.parallax-container-2 img {
+  top: -50%; /* Ajusta este valor para mover la imagen hacia arriba */
+  left: 0;
+}
+
+.parallax-container-3 img {
+  top: -10%; /* Ajusta este valor para mover la imagen hacia arriba */
+  left: 0;
+}
